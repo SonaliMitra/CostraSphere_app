@@ -1,0 +1,7 @@
+country,currency,currency_symbol,state,city,latitude,longitude,fiber_per_km,labor_per_km,connector_cost,maintenance_per_km,terrain_multiplier,estimated_total_project_cost
+China,CNY,¥,Beijing,Beijing,0,0,236034,64854,9160,45440,2.14,5211856
+China,CNY,¥,Shanghai,Shanghai,0,0,203894,68118,10124,36246,3.26,4963974
+China,CNY,¥,Guangdong,Shenzhen,0,0,166494,62818,7308,55374,3.32,4124814
+China,CNY,¥,Guangdong,Guangzhou,0,0,67330,15742,2198,10260,1.26,1377864
+China,CNY,¥,Guangdong,Dongguan,0,0,98886,23864,3124,13984,1.18,2011520
+China,CNY,¥,Sichuan,Chengdu,0,0,53844,22856,2708,8800,1.28,1370600

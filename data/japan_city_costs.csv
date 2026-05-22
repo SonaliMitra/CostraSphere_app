@@ -1,0 +1,5 @@
+country,currency,currency_symbol,state,city,latitude,longitude,fiber_per_km,labor_per_km,connector_cost,maintenance_per_km,terrain_multiplier,estimated_total_project_cost
+Japan,JPY,¥,Tokyo,Tokyo,0,0,469108,113452,14412,84388,2.53,9574460
+Japan,JPY,¥,Osaka,Osaka,0,0,347820,157884,14284,71724,1.9,8569668
+Japan,JPY,¥,Hokkaido,Sapporo,0,0,185140,30956,4352,21260,1.2,3352252
+Japan,JPY,¥,Kyoto,Kyoto,0,0,144636,28472,6032,16464,1.15,3064416

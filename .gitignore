@@ -1,0 +1,8 @@
+.tempo/
+node_modules/
+dist/
+.env
+costrasphere.db
+*.db-journal
+__pycache__/
+*.pyc

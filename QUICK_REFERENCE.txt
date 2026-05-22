@@ -1,0 +1,172 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                      COSTRASPHERE AI - QUICK REFERENCE                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 📋 STARTUP CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Install dependencies:
+    pip install -r requirements.txt
+    npm install
+
+[ ] Open Terminal 1 - Start Backend:
+    cd backend
+    python main.py
+    (Wait for: "INFO: Uvicorn running on http://0.0.0.0:8000")
+
+[ ] Open Terminal 2 - Start Frontend:
+    npm run dev
+    (Wait for: "VITE ready in X ms")
+
+[ ] Open Browser:
+    http://localhost:5173
+
+[ ] Login:
+    Email: developer@costrasphere.ai
+    Password: CostraSphere@Dev2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 🔌 IMPORTANT PORTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Backend (Python):  http://localhost:8000
+Frontend (React):  http://localhost:5173
+API Docs (Swagger): http://localhost:8000/docs
+
+⚠️  BOTH servers must be running for the app to work!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 🗄️ DATABASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Location: backend/database/costrasphere.db
+Status: ✅ AUTO-CREATED (already initialized)
+Developer Account: ✅ READY
+
+Tables:
+  • users (1 record: developer account)
+  • projects (empty - you'll create projects)
+  • cost_breakdowns (empty - auto-populated)
+  • otp_codes (empty - auto-populated)
+  • chat_history (empty - auto-populated)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 🔐 TEST ACCOUNT (Pre-created)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Email:    developer@costrasphere.ai
+Password: CostraSphere@Dev2026
+Role:     Developer (full access)
+
+✅ Use this account to test everything!
+✅ Create new accounts via "Sign Up" for additional testing
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 🚨 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Cannot GET /"
+   → Make sure you're on http://localhost:5173 (not 8000)
+   → Both servers must be running
+
+❌ "Connection refused"
+   → Backend not running. Start: cd backend && python main.py
+
+❌ "Port already in use"
+   → Kill process: lsof -ti:8000 | xargs kill -9 (Mac/Linux)
+   → Or: netstat -ano | findstr :8000 → taskkill /PID <PID> /F (Windows)
+
+❌ "Module not found"
+   → Install deps: pip install -r requirements.txt
+
+❌ Login fails
+   → Check backend is running: http://localhost:8000/docs
+   → Try exact credentials: developer@costrasphere.ai / CostraSphere@Dev2026
+
+❌ Database error
+   → Delete: rm backend/database/costrasphere.db
+   → Restart backend - it will recreate automatically
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 📁 IMPORTANT FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+START THE APP:
+  backend/main.py               ← Start this for backend
+  (run: python main.py)
+
+CONFIGURATION:
+  backend/.env                  ← Email, secrets, etc.
+  package.json                  ← Frontend dependencies
+
+DATABASE:
+  backend/database/costrasphere.db  ← SQLite database
+
+DOCUMENTATION:
+  README.md                     ← Full documentation
+  GETTING_STARTED.md            ← This file extended
+  DEPLOYMENT.md                 ← Production setup
+  API Docs: http://localhost:8000/docs
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ✨ FEATURES TO TEST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Login                     ✅ Ready
+2. Create Project           ✅ Ready (AI estimation included)
+3. View Dashboard           ✅ Ready (with charts)
+4. AI Chatbot              ✅ Ready (intelligent responses)
+5. Project Details         ✅ Ready (cost breakdown)
+6. PDF Export              ✅ Ready
+7. User Registration       ✅ Ready
+8. OTP Email              ✅ Ready (with Gmail)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 🎯 NEXT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. START SERVERS
+   Terminal 1: cd backend && python main.py
+   Terminal 2: npm run dev
+
+2. OPEN APP
+   http://localhost:5173
+
+3. LOGIN
+   Email: developer@costrasphere.ai
+   Password: CostraSphere@Dev2026
+
+4. TEST FEATURES
+   • Create a project
+   • View analytics
+   • Chat with AI
+   • Export PDF
+
+5. WHEN READY FOR PRODUCTION
+   Follow: DEPLOYMENT.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 📊 SYSTEM STATUS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Frontend Code:      Ready
+✅ Backend Code:       Ready
+✅ Database:           Ready (initialized)
+✅ Dependencies:       Ready (use provided requirements.txt)
+✅ Configuration:      Ready (pre-set)
+✅ Developer Account:  Ready (pre-created)
+✅ API Endpoints:      Ready (15+ endpoints)
+✅ Documentation:      Ready (comprehensive)
+
+STATUS: 🟢 READY TO USE!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                  Everything is set up and ready to go!
+                    Start the servers and begin using
+                           CostraSphere AI
+
+                           Happy building! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

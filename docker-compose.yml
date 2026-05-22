@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./database/costrasphere.db
+      - EMAIL_USER=costrasphere@gmail.com
+      - EMAIL_PASSWORD=uvjdbjoejboldtgr
+      - SECRET_KEY=costrasphere-secret-key-2026
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+    volumes:
+      - ./backend/database:/app/database
+    command: python main.py
+
+  frontend:
+    build: .
+    ports:
+      - "5173:5173"
+    command: npm run dev
+    volumes:
+      - ./src:/app/src
+      - ./node_modules:/app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  database:

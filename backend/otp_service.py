@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from database import SessionLocal
-from models import OTPCode
+from backend.models import OTPCode
 
 load_dotenv()
 

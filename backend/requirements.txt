@@ -1,6 +1,9 @@
+numpy
+openpyxl
 fastapi
 uvicorn
 sqlalchemy
+psycopg2-binary
 pydantic
 python-dotenv
 PyJWT
@@ -12,3 +15,6 @@ email-validator
 reportlab
 pillow
 requests
+aiofiles
+jinja2
+starlette

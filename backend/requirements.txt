@@ -1,5 +1,6 @@
-fastapi
-uvicorn
+flask
+flask-cors
+gunicorn
 sqlalchemy
 pydantic
 python-dotenv
@@ -12,3 +13,4 @@ email-validator
 reportlab
 pillow
 requests
+psycopg2-binary

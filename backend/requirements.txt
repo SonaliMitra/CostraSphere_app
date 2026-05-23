@@ -18,3 +18,4 @@ requests
 aiofiles
 jinja2
 starlette
+gunicorn

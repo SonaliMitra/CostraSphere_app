@@ -6,12 +6,12 @@ from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 
-from database import engine, get_db, Base
-from models import User, OTPCode, Project, CostBreakdown, ChatHistory
-from auth import hash_password, verify_password, create_access_token, decode_token
-from otp_service import generate_otp, send_otp_email, verify_otp
-from ai_engine import estimator
-from pdf_generator import generate_project_pdf
+from backend.database import engine, get_db, Base
+from backend.models import User, OTPCode, Project, CostBreakdown, ChatHistory
+from backend.auth import hash_password, verify_password, create_access_token, decode_token
+from backend.otp_service import generate_otp, send_otp_email, verify_otp
+from backend.ai_engine import estimator
+from backend.pdf_generator import generate_project_pdf
 
 load_dotenv()
 

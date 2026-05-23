@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = ["python311", "nodejs_20"]
+
+[phases.install]
+cmds = [
+  "python -m pip install -r backend/requirements.txt",
+  "npm install"
+]
+
+[phases.build]
+cmds = [
+  "npm run build"
+]
+
+[start]
+cmd = "gunicorn backend.app:app --bind 0.0.0.0:$PORT"
